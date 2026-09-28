@@ -1,6 +1,10 @@
 body{
     background: $background;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+
 .block-quar {
     width: 330px;
     height: 500px;
@@ -14,6 +18,7 @@ body{
     padding: 15px;
     border-radius: 10px;
     text-align: center;
+
     &__image{
         width: 300px;
         height: 300px;
