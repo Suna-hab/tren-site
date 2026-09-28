@@ -1,0 +1,33 @@
+body{
+    background: $background;
+}
+.block-quar {
+    width: 330px;
+    height: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    background: $white;
+    font-family: 'Paragraph', sans-serif;
+    color: $color-text;
+    box-sizing: border-box;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    &__image{
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+    }
+    &__title{
+        color: $color-title;
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+    &__text{
+        color: $color-text;
+        font-size: 0.9rem;
+        font-weight: 400;
+        line-height: 157%;
+    }
+}
