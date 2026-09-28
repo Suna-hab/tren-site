@@ -1,5 +1,8 @@
 body {
   background: hsl(212, 45%, 89%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .block-quar {
@@ -9,7 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   background: #ffffff;
-  font-family: "Paragraph", sans-serif;
+  font-family: "Outfit", sans-serif;
   color: hsl(216, 15%, 48%);
   box-sizing: border-box;
   padding: 15px;
