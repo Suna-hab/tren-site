@@ -3,14 +3,17 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100vh;
 }
 
-.block-quar {
-  width: 330px;
-  height: 500px;
+.quar-card {
+  max-width: 280px;
+  min-width: 280px;
+  height: auto;
   margin: auto;
   display: flex;
   flex-direction: column;
+  align-items: center;
   background: #ffffff;
   font-family: "Outfit", sans-serif;
   color: hsl(216, 15%, 48%);
@@ -19,17 +22,18 @@ body {
   border-radius: 10px;
   text-align: center;
 }
-.block-quar__image {
-  width: 300px;
-  height: 300px;
+.quar-card__image {
+  max-width: 250px;
+  min-width: 230px;
+  min-height: 230px;
   border-radius: 10px;
 }
-.block-quar__title {
+.quar-card__title {
   color: hsl(218, 44%, 22%);
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-weight: 700;
 }
-.block-quar__text {
+.quar-card__text {
   color: hsl(216, 15%, 48%);
   font-size: 0.9rem;
   font-weight: 400;
