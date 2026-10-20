@@ -1,4 +1,10 @@
-$white: #ffffff;
-$color-text: hsl(216, 15%, 48%);
-$color-title: hsl(218, 44%, 22%);
-$background: hsl(212, 45%, 89%);
+$text: #4c3886;
+$text-light: white;
+$border: #32235b20;
+$outline: #32235b80;
+$bg: linear-gradient(35deg,rgba(182, 201, 214, 1) 0%, rgba(192, 140, 219, 1) 100%);
+$bg-todo: #fdfcff;
+$btn-add: linear-gradient(90deg, #b8aecb 0%, #a397bb 100%);
+$btn-add-active: #b8aecb;
+$btn-delete: linear-gradient(90deg,rgba(212, 78, 78, 1) 0%, rgba(217, 35, 35, 1) 26%);
+$btn-delete-active: rgb(185, 61, 61);
