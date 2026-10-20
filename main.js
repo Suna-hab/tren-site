@@ -13,6 +13,9 @@ btnAdd.addEventListener('click', function(event){
         warn.textContent = 'Введите что-то!'
         return;
     }
+    else{
+        warn.textContent = '';
+    }
 
     li.classList.add('task-list__item');
     btn.classList.add('task-list__btn');
@@ -22,6 +25,7 @@ btnAdd.addEventListener('click', function(event){
     taskList.append(li);
     li.append(btn);
     input.value = '';
+    
 
     btn.addEventListener('click', function(){
         btn.parentElement.remove();
