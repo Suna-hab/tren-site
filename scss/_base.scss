@@ -15,7 +15,7 @@ main{
     width: 100%;
     max-width: 450px;
     min-width: 220px;
-    height: 500px;
+    height: 570px;
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
@@ -23,16 +23,39 @@ main{
     background-color: $bg-todo;
     border: 0.1px solid $border;
     border-radius: 20px;
+    position: relative;
     &__title{
         color: $text;
         font-size: 30px;
         font-weight: 500;
     }
     &__text{
+        margin: 0;
+        margin-bottom: 20px;
         color: $text;
         font-size: 17px;
         font-weight: 400;
         text-align: center;
+        &--completed{
+            text-decoration: line-through;
+        }
+    }
+    &__btn{
+        background: $btn-delete;
+        color: white;
+        width: 100px;
+        min-height: 40px;
+        border: none;
+        border-radius: 7px;
+        font-size: 14px;
+        font-weight: 400;   
+        @include flex-center;
+        position: relative;
+        left: 30%;
+        &:active{
+            background: $btn-delete-active;
+            transform: translateX(-2px) translateY(1px);
+        }
     }
 }
 .form{
@@ -65,20 +88,20 @@ main{
         background: $btn-add;
         color: $text-light;
         font-size: 14px;
+        &:active{
+            background: $btn-add-active;
+        }
     }
-     &__btn:active{
-        background: $btn-add-active;
-     }
+    
 }
 .task-list{
     width: 100%;
     box-sizing: border-box;
-    height: 310px;
+    height: 350px;
     border: 1px solid $border;
     border-left: none;
     border-right: none;
     overflow-y: auto;
-    overflow-wrap: break-word;
     padding: 10px 0px;
     @include flex-column;
     gap: 7px;
@@ -87,13 +110,18 @@ main{
         padding: 10px 0px;
         box-sizing: border-box;
         @include flex-between;
+        gap: 10px;
         list-style-type: none;
         margin: 0;
         border: 1px solid $border;
         border-radius: 7px;
         padding: 12px;
+        word-break: break-all;
     }
     &__text{
+        width: 80%;
+        max-width: 275px;
+        min-width: 100px;
         color: $text;
         font-size: 14px;
         font-weight: 400;
@@ -102,16 +130,18 @@ main{
     &__btn{
         background: $btn-delete;
         color: white;
-        width: 70px;
+        width: 20%;
+        max-width: 70px;
+        min-width: 52px;
         height: 30px;
         border: none;
         border-radius: 7px;
         font-size: 14px;
         font-weight: 400;   
         @include flex-center;
+         &:active{
+            background: $btn-delete-active;
+            transform: translateX(-2px) translateY(1px);
+        }
     }
-     &__btn:active{
-        background: $btn-delete-active;
-        transform: translateX(-2px) translateY(1px);
-     }
 }

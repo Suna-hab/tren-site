@@ -1,7 +1,13 @@
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: linear-gradient(35deg, rgb(182, 201, 214) 0%, rgb(192, 140, 219) 100%);
   font-family: "DM Sans", sans-serif;
 }
@@ -9,25 +15,40 @@ body {
 main {
   width: 100%;
   height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .todo-list {
   width: 100%;
   max-width: 450px;
   min-width: 220px;
-  height: 500px;
+  height: 570px;
   margin: 0;
   padding: 20px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background-color: #fdfcff;
   border: 0.1px solid rgba(50, 35, 91, 0.1254901961);
   border-radius: 20px;
+  position: relative;
 }
 .todo-list__title {
   color: #4c3886;
@@ -35,10 +56,42 @@ main {
   font-weight: 500;
 }
 .todo-list__text {
+  margin: 0;
+  margin-bottom: 20px;
   color: #4c3886;
   font-size: 17px;
   font-weight: 400;
   text-align: center;
+}
+.todo-list__text--completed {
+  text-decoration: line-through;
+}
+.todo-list__btn {
+  background: -webkit-gradient(linear, left top, right top, from(rgb(212, 78, 78)), color-stop(26%, rgb(217, 35, 35)));
+  background: linear-gradient(90deg, rgb(212, 78, 78) 0%, rgb(217, 35, 35) 26%);
+  color: white;
+  width: 100px;
+  min-height: 40px;
+  border: none;
+  border-radius: 7px;
+  font-size: 14px;
+  font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  left: 30%;
+}
+.todo-list__btn:active {
+  background: rgb(185, 61, 61);
+  -webkit-transform: translateX(-2px) translateY(1px);
+          transform: translateX(-2px) translateY(1px);
 }
 
 .form {
@@ -48,15 +101,22 @@ main {
   height: 30px;
   border: 1px solid rgba(50, 35, 91, 0.1254901961);
   border-radius: 7px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .form__input {
   width: 80%;
   height: 30px;
   padding: 10px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   border: none;
   border-radius: 7px;
   outline: none;
@@ -66,11 +126,13 @@ main {
   font-family: "DM Sans", sans-serif;
 }
 .form__btn {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   width: 20%;
   height: inherit;
   border: none;
   border-radius: 0px 7px 7px 0px;
+  background: -webkit-gradient(linear, left top, right top, from(#b8aecb), to(#a397bb));
   background: linear-gradient(90deg, #b8aecb 0%, #a397bb 100%);
   color: white;
   font-size: 14px;
@@ -81,54 +143,81 @@ main {
 
 .task-list {
   width: 100%;
-  box-sizing: border-box;
-  height: 310px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  height: 350px;
   border: 1px solid rgba(50, 35, 91, 0.1254901961);
   border-left: none;
   border-right: none;
   overflow-y: auto;
-  overflow-wrap: break-word;
   padding: 10px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 7px;
 }
 .task-list__item {
   width: 100%;
   padding: 10px 0px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
   list-style-type: none;
   margin: 0;
   border: 1px solid rgba(50, 35, 91, 0.1254901961);
   border-radius: 7px;
   padding: 12px;
+  word-break: break-all;
 }
 .task-list__text {
+  width: 80%;
+  max-width: 275px;
+  min-width: 100px;
   color: #4c3886;
   font-size: 14px;
   font-weight: 400;
   margin: 0;
 }
 .task-list__btn {
+  background: -webkit-gradient(linear, left top, right top, from(rgb(212, 78, 78)), color-stop(26%, rgb(217, 35, 35)));
   background: linear-gradient(90deg, rgb(212, 78, 78) 0%, rgb(217, 35, 35) 26%);
   color: white;
-  width: 70px;
+  width: 20%;
+  max-width: 70px;
+  min-width: 52px;
   height: 30px;
   border: none;
   border-radius: 7px;
   font-size: 14px;
   font-weight: 400;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .task-list__btn:active {
   background: rgb(185, 61, 61);
-  transform: translateX(-2px) translateY(1px);
+  -webkit-transform: translateX(-2px) translateY(1px);
+          transform: translateX(-2px) translateY(1px);
 }
-
-/*# sourceMappingURL=style.css.map */
